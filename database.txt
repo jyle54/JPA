@@ -1,0 +1,36 @@
+joined inheritance:
+taulukko:
+ID  	DTYPE  	HINTA  	NIMI  
+1	Kirja	26.99	Core Java
+2	Kirja	33.5	JavaScript Ninja
+3	Kirja	9.95	Thinking Of Java
+4	Cd	19.95	Powerslave
+5	Cd	14.95	Full Moon Fever
+6	Cd	4.95	Luotan Sydämen Ääneen
+7	Cd	29.95	Abbey Road
+---------------------------------------
+single table:
+ID  	KANTATUOTE_TYPE  	HINTA  	NIMI  	ISBN  	TEKIJAT  	ARTISTI  	BIISEJA  	PITUUS  
+1	Kirja	26.99	Core Java	A123	Cay Horstmann	null	null	null
+2	Kirja	33.5	JavaScript Ninja	A223	John Resig	null	null	null
+3	Kirja	9.95	Thinking Of Java	A313	Bruce Eckel	null	null	null
+4	Cd	19.95	Powerslave	null	null	Iron Maiden	8	3048
+5	Cd	14.95	Full Moon Fever	null	null	Tom Petty	12	2398
+6	Cd	4.95	Luotan Sydämen Ääneen	null	null	Paula Koivuniemi	12	2850
+7	Cd	29.95	Abbey Road	null	null	The Beatles	17	2545
+------------------------------------------------------
+abstract table:
+cd:
+ID  	ARTISTI  	BIISEJA  	HINTA  	NIMI  	PITUUS  
+4	Iron Maiden	8	19.95	Powerslave	3048
+5	Tom Petty	12	14.95	Full Moon Fever	2398
+6	Paula Koivuniemi	12	4.95	Luotan Sydämen Ääneen	2850
+7	The Beatles	17	29.95	Abbey Road	2545
+kirja:
+ID  	HINTA  	ISBN  	NIMI  	TEKIJAT  
+1	26.99	A123	Core Java	Cay Horstmann
+2	33.5	A223	JavaScript Ninja	John Resig
+3	9.95	A313	Thinking Of Java	Bruce Eckel
+Tuote :
+ID  	HINTA  	NIMI  
+-------------------------------

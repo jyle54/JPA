@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+	<title>Insert a new Book</title>
+	<h:outputStylesheet library="css" name="tyylit.css" />
+</h:head>
+<h:body>
+	
+
+	<h:form id="insertform">
+	<h:panelGrid columns="8">
+	<h:outputlabel for="name">Name</h:outputlabel>
+	<h:inputText id="name" value="#{book.name}"/></h:inputText>
+	
+	<h:outputlabel for="name">Author</h:outputlabel>
+	<h:inputText id="author" value="#{book.author}"></h:inputText>
+	
+	<h:outputlabel for="name">edition</h:outputlabel>
+	<h:inputText label="edition" value="#{book.edition}"></h:inputText>
+
+	<h:outputlabel for="name">Pages</h:outputlabel>
+	<h:inputText id="pages" value="#{book.pages}"></h:inputText>
+	
+	<h:outputlabel for="name">Publisher</h:outputlabel>
+	<h:inputText id="publisher" value="#{book.publisher}"></h:inputText>
+	
+	<h:outputlabel for="name">Language</h:outputlabel>
+	<h:inputText id="language" value="#{book.language}"></h:inputText>
+			
+
+	<h:outputlabel for="name">Identifier</h:outputlabel>
+	<h:inputText id="identifier" value="#{book.identifier}"></h:inputText>
+	
+	<h:outputlabel for="name">Code</h:outputlabel>
+	<h:inputText id="code" value="#{book.code}"></h:inputText>
+	
+	<h:commandButton
+				action="${bookController.alustaBook()}"
+				value="Tallenna kirja" />
+			
+	</h:panelGrid>
+	</h:form>
+
+</h:body>
+</html>

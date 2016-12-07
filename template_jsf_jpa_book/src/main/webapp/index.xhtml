@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+	<title>Books</title>
+	<h:outputStylesheet library="css" name="tyylit.css" />
+</h:head>
+<h:body>
+
+	<h:form id="mainform">
+		<h:dataTable styleClass="data" cellspacing="0" cellpadding="0"
+			border="0" rowClasses="odd,even" value="#{bookController.books}"
+			var="b">
+			<h:column headerstyleClass="first">
+				<f:facet name="header">Name</f:facet>
+                    #{b.name}
+            </h:column>
+		</h:dataTable>
+
+		<table>
+			<tr>
+				<td><h:commandButton action="#{bookController.initialize()}"
+						value="load demo books" /></td>
+				<td><h:commandButton action="insertBook" value="insert a book" /></td>
+			</tr>
+		</table>
+	</h:form>
+
+	<div style="color: red">
+		<h:messages globalOnly="true" />
+	</div>
+
+</h:body>
+
+</html>
